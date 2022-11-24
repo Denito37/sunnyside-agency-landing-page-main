@@ -145,7 +145,7 @@ main img{
 .testimonial img{
     max-width: 80px;
     border-radius: 50%;
-    margin: 0 33%;
+    margin: 0 40%;
 }
 .testimonial p, .testimonial footer{
     text-align: center;
@@ -192,4 +192,46 @@ main img{
 }
 .last .attribution{
     padding: 1rem;
+}
+/* *Mobile */
+@media (width <= 768px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    header nav{
+        display: none;
+    }
+    main .title{
+        left: 2rem;
+        text-align: center;
+
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .wrap1,.wrap4{
+        padding: 3rem;
+        text-align: center;
+    }
+    .wrapper img{
+        position: relative;
+        max-width: 100%;
+    }
+    .wrap5 .txt,.wrap6 .txt{ /* !fix text*/
+        display: none;
+    }
+    .testimonial{
+        display: flex;
+        flex-direction: column;
+    }
+    .img-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .img-row img{
+        max-width: 100%;
+    }
 }
