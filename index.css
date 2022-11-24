@@ -11,12 +11,12 @@
     --ntrl-dgBlue:hsl(232, 10%, 55%);
     --ntrl-gBlue:hsl(210, 4%, 67%);
 }
-/*General*/
+/* *General*/
 body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "Barlow",serif;
 }
 h3{
@@ -31,23 +31,28 @@ a{
     display: flex;
     flex-direction: column;
 }
-/*HEADER + MAIN*/
+/* *HEADER + MAIN*/
 header{
     position: absolute;
-    display: inline;
     padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+header img{
+    width: 140px;
 }
 header ul{
     display: inline;
     color: white;
 }
 ul button{
+    background-color: #fff;
     padding: .5rem 1.5rem;
     border-radius: 32px;
     border: solid 0px;
     font-family: "Fraunces", serif;
     text-transform: uppercase;
-
 }
 main .title{
     z-index: 1;
@@ -69,8 +74,9 @@ main .arrow{
 }
 main img{
     max-width: 100%;
+    vertical-align: middle;
 }
-/*WRAPPER 2 by 3*/
+/* *WRAPPER 2 by 3*/
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -82,12 +88,15 @@ main img{
     align-self: center;
     padding: 5rem;
 }
-.wrap2{
+.wrap2 img{
     grid-area:1/2/1/2 ;
-    height: 100%;
+    min-height: 100%;
+    vertical-align: middle;
 }
-.wrap3{
+.wrap3 img{
     grid-area:2/1/2/1 ;
+    height: 100%;
+    vertical-align: middle;
 }
 .wrap4{
     grid-area:2/2/2/2 ;
@@ -101,6 +110,7 @@ main img{
 .wrap5 img{
     position: absolute;
     z-index: -1;
+    vertical-align: middle;
 }
 .wrap5 .txt{
     text-align: center;
@@ -114,6 +124,7 @@ main img{
 .wrap6 img{
     position: absolute;
     z-index: -1;
+    vertical-align: middle;
 }
 .wrap6 .txt{
     text-align: center;
@@ -121,7 +132,7 @@ main img{
     position: relative;
     top: 50vh;
 }
-/*SECTION Testimonials*/
+/* *SECTION Testimonials*/
 .CT{
     text-align: center;
     padding: 0rem 1rem;
@@ -136,7 +147,14 @@ main img{
     border-radius: 50%;
     margin: 0 33%;
 }
-/*SECTION IMG-ROW*/
+.testimonial p, .testimonial footer{
+    text-align: center;
+}
+.testimonial footer{
+    font-size: .8rem;
+    color: var(--ntrl-dgBlue);
+}
+/* *SECTION IMG-ROW*/
 .img-row{
     display: flex;
     object-fit: contain;
@@ -144,12 +162,34 @@ main img{
 .img-row img{
     max-width: 25vw;
     height: auto;
+    vertical-align: middle;
 }
-/*FOOTER*/
+/* *FOOTER*/
 .last { 
     background: var(--footer-clr);
     text-align: center;
-    padding: 5rem 1rem;
+    height: 130px;
+    padding: 2rem 1rem;
     font-size: 11px; 
     text-align: center; 
+    display: flex;
+    flex-direction: column;
+}
+.last img{
+    padding: .5rem;
+    max-width: 140px;
+    align-self: center;
+}
+.last nav{
+    padding: 1rem;
+    max-width: 250px;
+    word-spacing: 30px;
+    align-self: center;
+}
+.last a{
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+}
+.last .attribution{
+    padding: 1rem;
 }
