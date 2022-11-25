@@ -112,12 +112,6 @@ main img{
     z-index: -1;
     vertical-align: middle;
 }
-.wrap5 .txt{
-    text-align: center;
-    padding: 0rem 5rem;
-    position: relative;
-    top: 50vh;
-}
 .wrap6{
     grid-area:3/2/3/2 ;
 }
@@ -126,11 +120,19 @@ main img{
     z-index: -1;
     vertical-align: middle;
 }
-.wrap6 .txt{
-    text-align: center;
-    padding: 0rem 5rem;
-    position: relative;
-    top: 50vh;
+@media (min-width: 769px){
+    .wrap5 .txt{
+        text-align: center;
+        padding: 0rem 5rem;
+        position: relative;
+        top: 50vh;
+    }
+    .wrap6 .txt{
+        text-align: center;
+        padding: 0rem 5rem;
+        position: relative;
+        top: 50vh;
+    }
 }
 /* *SECTION Testimonials*/
 .CT{
@@ -194,13 +196,18 @@ main img{
     padding: 1rem;
 }
 /* *Mobile */
-@media (width <= 768px){
+@media (max-width : 768px){
     body{
         display: flex;
         flex-direction: column;
     }
     header nav{
         display: none;
+    }
+    header::after{
+        content: url(images/icon-hamburger.svg);
+        margin-top: .2rem;
+        margin-right: 3rem;
     }
     main .title{
         left: 2rem;
@@ -219,8 +226,17 @@ main img{
         position: relative;
         max-width: 100%;
     }
-    .wrap5 .txt,.wrap6 .txt{ /* !fix text*/
-        display: none;
+    .wrap5 .txt{
+        text-align: center;
+        padding: 0rem 5rem;
+        position: absolute;
+        top: 170rem;
+    }
+    .wrap6 .txt{
+        text-align: center;
+        padding: 0rem 5rem;
+        position: absolute;
+        top: 223rem;
     }
     .testimonial{
         display: flex;
