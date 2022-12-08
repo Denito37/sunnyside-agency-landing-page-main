@@ -12,12 +12,19 @@
     --ntrl-gBlue:hsl(210, 4%, 67%);
 }
 /* *General*/
+html{
+    scroll-behavior: smooth;
+}
 body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 1.125rem;
     font-family: "Barlow",serif;
+}
+.contain{
+    display: flex;
+    flex-direction: column;
 }
 h3{
     font-family: "Fraunces", serif;
@@ -27,24 +34,30 @@ a{
     font-family: "Fraunces", serif;
     color: black;
 }
-.contain{
-    display: flex;
-    flex-direction: column;
-}
 /* *HEADER + MAIN*/
 header{
-    position: absolute;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--dark-blue);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
-    width: 95%;
 }
 header img{
-    width: 140px;
+    max-width: 100%;
+    padding: 0rem 2rem;
 }
-header ul{
+header ul {
     display: inline;
+}
+header ul a{
     color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+header ul a:hover{
+    color: black;
 }
 ul button{
     background-color: #fff;
@@ -53,6 +66,11 @@ ul button{
     border: solid 0px;
     font-family: "Fraunces", serif;
     text-transform: uppercase;
+    transition: .3s;
+}
+ul button:hover{
+    color: #fff;
+    background-color: black;
 }
 main .title{
     z-index: 1;
@@ -82,6 +100,9 @@ main img{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
+.wrapper p{
+    line-height: 1.6;
+}
 .wrap1{
     grid-area: 1/1/1/1 ;
     justify-self: center;
@@ -109,27 +130,33 @@ main img{
     display: flex;
 }
 .wrap5 img{
-    position: absolute;
+    position: relative;
     z-index: -1;
     vertical-align: middle;
+}
+.wrap5 .txt{
+    position: absolute;
+    left: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    max-width: 500px;
+    align-self: flex-end;
 }
 .wrap6{
     grid-area:3/2/3/2 ;
     display: flex;
 }
 .wrap6 img{
-    position: absolute;
+    position: relative;
     z-index: -1;
     vertical-align: middle;
 }
-.wrap5 .txt{
-    text-align: center;
-    padding: 2rem 5rem;
-    align-self: flex-end;
-}
 .wrap6 .txt{
+    position: absolute;
+    left: 52rem;
+    padding-bottom: 2rem;
     text-align: center;
-    padding: 2rem 5rem;
+    max-width: 500px;
     align-self: flex-end;
 }
 /* *SECTION Testimonials*/
@@ -222,11 +249,18 @@ main img{
         flex-direction: column;
     }
     .wrap1,.wrap4{
-        padding: 6rem 3rem;
+        padding: 6rem 2.5rem;
         text-align: center;
     }
-    .wrap6{
-        max-width: fit-content;
+    .wrap5 .txt{
+        position: absolute;
+        left:  3rem;
+        max-width: 400px;
+    }
+    .wrap6 .txt{
+        position: absolute;
+        left:  3rem;
+        max-width: 400px;
     }
     /* *Testimonials */
     .testimonial{
