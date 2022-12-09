@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
 :root{
     --red:hsl(7,99%,70%);
@@ -22,10 +21,6 @@ body{
     font-size: 1.125rem;
     font-family: "Barlow",serif;
 }
-.contain{
-    display: flex;
-    flex-direction: column;
-}
 h3{
     font-family: "Fraunces", serif;
     font-size: 1.8rem;
@@ -34,7 +29,10 @@ a{
     font-family: "Fraunces", serif;
     color: black;
 }
-/* *HEADER + MAIN*/
+.mobileM ,.dark{
+    display: none;
+}
+/* *HEADER */
 header{
     position: sticky;
     top: 0;
@@ -46,7 +44,7 @@ header{
 }
 header img{
     max-width: 100%;
-    padding: 0rem 2rem;
+    padding: 0rem 4rem 0rem 0rem;
 }
 header ul {
     display: inline;
@@ -72,17 +70,21 @@ ul button:hover{
     color: #fff;
     background-color: black;
 }
+.open{
+    display: none;
+}
+/* *MAIN */
 main .title{
     z-index: 1;
     position: absolute;
     top: 10rem;
     left: 33%;
-    text-transform: uppercase;
-    letter-spacing: .33rem;
-    color: white;
     font-family: "Fraunces", serif;
     font-weight: 700;
     font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .33rem;
+    color: white;
 }
 main .arrow{
     z-index: 1;
@@ -95,7 +97,7 @@ main img{
     vertical-align: middle;
 }
 /* *WRAPPER 2 by 3*/
-.wrapper{
+.wrapper{/* !not responsive*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -111,12 +113,10 @@ main img{
 }
 .wrap2 img{
     grid-area:1/2/1/2 ;
-    min-height: 100%;
     vertical-align: middle;
 }
 .wrap3 img{
     grid-area:2/1/2/1 ;
-    height: 100%;
     vertical-align: middle;
 }
 .wrap4{
@@ -126,37 +126,35 @@ main img{
     padding: 5rem;
 }
 .wrap5{
+    position: relative;
     grid-area: 3/1/3/1;
     display: flex;
 }
 .wrap5 img{
-    position: relative;
-    z-index: -1;
     vertical-align: middle;
 }
 .wrap5 .txt{
     position: absolute;
-    left: 5rem;
-    padding-bottom: 2rem;
+    left: 25%;
+    right: 25%;
+    padding-bottom: 4rem;
     text-align: center;
-    max-width: 500px;
     align-self: flex-end;
 }
 .wrap6{
+    position: relative;
     grid-area:3/2/3/2 ;
     display: flex;
 }
 .wrap6 img{
-    position: relative;
-    z-index: -1;
     vertical-align: middle;
 }
 .wrap6 .txt{
     position: absolute;
-    left: 52rem;
-    padding-bottom: 2rem;
+    left: 25%;
+    right: 25%;
+    padding-bottom: 4rem;
     text-align: center;
-    max-width: 500px;
     align-self: flex-end;
 }
 /* *SECTION Testimonials*/
@@ -170,7 +168,7 @@ main img{
     padding: 3rem;
 }
 .testimonial img{
-    max-width: 80px;
+    max-width: 5rem;
     border-radius: 50%;
     margin: 0 40%;
 }
@@ -219,28 +217,64 @@ main img{
 }
 .last .attribution{
     padding: 1rem;
+    color: #fff;
 }
 /* *Mobile */
 @media (max-width : 768px){
     /* *General */
+    .dark{
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+        width: 100vw;
+        background-color: black;
+        opacity: .8;
+        mix-blend-mode:darken;
+        display: none;
+    }
     img{
         max-width: 100%;
-    }
-    .contain{
-        display: flex;
-        flex-direction: column;
     }
     header nav{
         display: none;
     }
-    header::after{
-        content: url(images/icon-hamburger.svg);
-        margin-top: .2rem;
-        margin-right: 3rem;
+    .mobileM nav, .mobileM img{
+        opacity: 0;
+    }
+    .mobileM img{
+        padding: 1rem;
+        max-width: 40px;
+        max-height: 40px;
+    }
+    .mobileM nav{
+        margin-left: 1rem;
+        font-size: 1.7rem;
+    }
+    .mobileM a{
+        text-decoration: none;
+    }
+    .mobileM{
+        background-color:hsl(206, 55%, 73%);
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transition: .3s;
+    }
+    .open{
+        display: inline;
+        width: 40px;
+        background-color: transparent;
+        border: solid 0px;
     }
     /* *MAIN */
     main .title{
-        left: 2rem;
+        left: 10%;
+        right: 10%;
+        scale: .9;
         text-align: center;
     }
     /* *Wrap */
@@ -254,12 +288,14 @@ main img{
     }
     .wrap5 .txt{
         position: absolute;
-        left:  3rem;
+        left: 25%;
+        right: 25%;
         max-width: 400px;
     }
     .wrap6 .txt{
         position: absolute;
-        left:  3rem;
+        left:  25%;
+        right: 25%;
         max-width: 400px;
     }
     /* *Testimonials */
@@ -270,6 +306,7 @@ main img{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        max-width: 768px;
     }
     .img-row img{
         max-width: 100%;

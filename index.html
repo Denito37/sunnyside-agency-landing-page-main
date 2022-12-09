@@ -9,7 +9,17 @@
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
 <body>
-  <div class="contain">
+
+    <div class="dark"></div>
+
+    <div class="mobileM">
+        <img class="close" src="images/Clear Icon.png" alt="exit-menu">
+        <nav>
+          <ul> <a href="#about">About</a></ul>
+          <ul> <a href="#service">Services</a></ul>
+          <ul> <a href="#project">Projects</a></ul>
+        </nav>
+    </div>
 
     <header class="logo">
       <img  class="logo" src="images/logo.svg" alt="logo"">
@@ -18,7 +28,8 @@
         <ul> <a href="#service">Services</a></ul>
         <ul> <a href="#project">Projects</a></ul>
         <ul> <button>Contact</button> </ul>
-      </nav>  
+      </nav> 
+      <button class="open"><img class="open" src="images/icon-hamburger.svg" alt=" mobile-menu"></button> 
     </header>
 
   <main id="about">
@@ -31,6 +42,7 @@
   </main> 
 
   <section class="wrapper" id="service">
+
     <article class="wrap2">
       <picture>
         <source media="(max-width: 768px)" srcset="images/mobile/image-transform.jpg">
@@ -40,10 +52,8 @@
 
     <article class="wrap1">
       <h3> Transform your brand</h3>
-
      <p> We are a full-service creative agency specializing in helping brands grow fast. 
       Engage your clients through compelling visuals that do most of the marketing for you.</p>
-
       <a href="#"> Learn more </a>
     </article>
 
@@ -56,9 +66,8 @@
 
     <article class="wrap4">
       <h3> Stand out to the right audience </h3>
-
-      <p> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
-
+      <p> Using a collaborative formula of designers, researchers, photographers, videographers, 
+        and copywriters, we’ll build and extend your brand in digital places. </p>
       <a href="#"> Learn more</a>
     </article>
 
@@ -69,7 +78,8 @@
       </picture>
       <div class="txt">
         <h3> Graphic design</h3>
-        <p> Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        <p> Great design makes you memorable. We deliver artwork that underscores your
+           brand message and captures potential clients’ attention.</p>
       </div>
     </article>
 
@@ -80,9 +90,11 @@
       </picture>
       <div class="txt">
         <h3> Photography</h3>
-        <p> Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        <p> Increase your credibility by getting the most stunning, high-quality photos 
+          that improve your business image.</p>
       </div>
     </article>
+
   </section>
 
   <section class="testimonial-total">
@@ -91,21 +103,24 @@
     <div class="testimonial">
       <article class="testimonial1">
         <img src="images/image-emily.jpg" alt="Emily">
-        <p> We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+        <p> We put our trust in Sunnyside and they delivered, making sure our needs 
+          were met and deadlines were always hit.</p>
         <p>Emily R.</p>
         <footer>Marketing Director</footer> 
       </article>
 
       <article class="testimonial2">
         <img src="images/image-thomas.jpg" alt="image-thomas">
-        <p> Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+        <p> Sunnyside’s enthusiasm coupled with their keen interest in our brand’s 
+          success made it a satisfying and enjoyable experience.</p>
         <p>Thomas S.</p>
         <footer>Chief Operating Officer</footer>
       </article>
 
       <article class="testimonial3">
         <img src="images/image-jennie.jpg" alt="Jennie">
-        <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p> 
+        <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. 
+          Highly recommended!</p> 
         <p>Jennie F.</p>
         <footer>Business Owner</footer>
       </article>
@@ -135,7 +150,7 @@
   <footer class="last">
     <img src="images/logo.svg" alt="logo">
     <nav>
-     <a href="#about"> About</a>
+      <a href="#about"> About</a>
       <a href="#service"> Services </a>
       <a href="#project"> Projects</a>
     </nav>
@@ -145,7 +160,6 @@
     </div>
   </footer>
 
-</div>
 
 </body>
 </html>
