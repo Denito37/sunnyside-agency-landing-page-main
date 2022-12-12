@@ -37,7 +37,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 2;
-    background-color: var(--dark-blue);
+    background-color:#3cc4fc;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -254,7 +254,7 @@ main img{
         text-decoration: none;
     }
     .mobileM{
-        background-color:hsl(206, 55%, 73%);
+        background-color:#3cc4fc;
         display: block;
         height: 100%;
         width: 0;
